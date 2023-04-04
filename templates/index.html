@@ -1,0 +1,142 @@
+{% load static %}
+{% include 'partials/head.html' %}
+
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+          {%include 'partials/nav.html'%}
+
+            <!-- Header-->
+            <header class="bg-dark py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                              <h1 class="display-5 fw-bolder text-white mb-2">Find Your Dream Job</h1>
+                              <p class="lead fw-normal text-white-50 mb-4">Explore thousands of job listings from top companies and apply today!</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'jobs:joblist' %}">Get Started</a>
+                                    <a class="btn btn-outline-light btn-lg px-4" href="{% url 'jobs:about' %}">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/4tXUtMsCyNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen autoplay></iframe></div>
+                    </div>
+                </div>
+            </header>
+
+           <!-- Job Portals section-->
+            <section class="py-5" id="job-portals">
+                <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Find Your Dream Job with Job Portals.</h2></div>
+                    <div class="col-lg-8">
+                    <div class="row gx-5 row-cols-1 row-cols-md-2">
+                        <div class="col mb-5 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-geo-alt"></i></div>
+                        <h2 class="h5">Location-Based Search</h2>
+                        <p class="mb-0">Search for job openings near your preferred location with our location-based search feature.</p>
+                        </div>
+                        <div class="col mb-5 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-briefcase"></i></div>
+                        <h2 class="h5">Job Categories</h2>
+                        <p class="mb-0">Browse job openings by category and find the one that matches your skills and experience.</p>
+                        </div>
+                        <div class="col mb-5 mb-md-0 h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-star"></i></div>
+                        <h2 class="h5">Saved Jobs</h2>
+                        <p class="mb-0">Save the job openings that you're interested in and come back to them later.</p>
+                        </div>
+                        <div class="col h-100">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-chat-dots"></i></div>
+                        <h2 class="h5">Apply Directly</h2>
+                        <p class="mb-0">Apply directly to the companies that post their job openings on our platform and get hired faster.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+                    <!-- Testimonial section-->
+            <section class="py-5 bg-dark" id="job-testimonials">
+              <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                  <div id="mySlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-bs-target="#mySlider" style="background-color: #333; color: #fff;" data-bs-slide-to="0" class="active"></li>
+                      <li data-bs-target="#mySlider" style="background-color: #333; color: #fff;" data-bs-slide-to="2"></li>
+                      <li data-bs-target="#mySlider" style="background-color: #333; color: #fff;" data-bs-slide-to="1"></li>
+                    </ol>
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="{% static 'img/job1.jpg' %}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{% static 'img/job2.jpg' %}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{% static 'img/job3.png' %}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="carousel-control-prev" href="#mySlider" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#mySlider" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+              
+              <!-- Call to action-->
+              <section class="py-5 bg-light" id="job-call-to-action">
+                  <div class="container px-5 my-5">
+                      <div class="row gx-5 justify-content-center">
+                          <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5" style="height: 200px; width: 100%; ">
+                                <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                                    <div class="mb-4 mb-xl-0">
+                                        <div class="fs-3 fw-bold text-white">If your desired job was not available we can send you notifications when it becomes availaible.</div>
+                                        <div class="text-white-50">Sign up for the latest updates.</div>
+                                    </div>
+                                    <div class="ms-xl-4">
+                                        <form method="POST" action="{% url 'jobs:newsletter_subscribe' %}">
+                                            {% csrf_token %}
+                                            <div class="input-group mb-2">
+                                              <input class="form-control" type="text" name="text" placeholder="Desired Job..." />
+                                                <input class="form-control" type="email" name="email" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
+                                                <button class="btn btn-outline-light" id="button-newsletter" type="submit">Sign up</button>
+                                            </div>
+                                            <div class="small text-white-50">We care about privacy, and will never share your data.</div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </aside>
+                      </div>
+                  </div>
+              </section>
+              
+            
+        </main>
+        <!-- Footer-->
+        {% include 'partials/footer.html' %}
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-DXMehHGjTIi0yP75j3L5pTVWkkx5ZvC5d+fQoaOTlHILbO8tPv60tD47kFjM7w4Q4n1Z7VY/B/N9A38Fj/HRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

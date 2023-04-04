@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!-- Header-->
+    <header class="py-5 bg-dark">
+      <div class="container px-5">
+          <div class="row justify-content-center">
+              <div class="col-lg-8 col-xxl-6">
+                  <div class="text-center my-5">
+                      <h1 class="fw-bolder mb-3 text-white">Companies That Are Recruiting</h1>
+                      <p class="lead fw-normal text-muted mb-4 ">The country's small size and multicultural population have also fostered a dynamic and collaborative business community, where companies often work together to drive innovation and growth.</p>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <div class="container mt-5">
+    <h1>Companies</h1>
+    <hr>
+    <div class="row">
+      {% for company in companies %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{ company.logo.url }}" class="card-img-top" alt="{{ company.name }} Logo">
+            <div class="card-body">
+              <h5 class="card-title">{{ company.name }}</h5>
+              <p class="card-text">{{ company.description|truncatechars:150 }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">{{ company.location }}</small>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="{{ company.website }}" target="_blank" class="btn btn-sm btn-outline-secondary">View Company</a>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <div class="col-md-12">
+          <p>No companies found.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

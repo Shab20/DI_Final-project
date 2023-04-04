@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm mt-5">
+                    <div class="card-body">
+                        <h1 class="mb-4">Thank You!</h1>
+                        <p>Your job application has been received.</p>
+                        <p>We will review your application and get back to you soon.</p>
+                        <a href="{% url 'jobs:home' %}"class="btn btn-primary mt-4">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

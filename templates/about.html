@@ -1,0 +1,98 @@
+{% load static %}
+{%include 'partials/nav.html'%}
+
+{%include 'partials/head.html'%}
+
+<!DOCTYPE html>
+<html lang="en">
+  
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+             <!-- Header-->
+             <header class="py-5 bg-dark">
+                <div class="container px-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-xxl-6">
+                            <div class="text-center my-5">
+                                <h1 class="fw-bolder mb-3 text-white">About Us.</h1>
+                                <p class="lead fw-normal text-muted mb-4">Our mission is to connect job seekers with employment opportunities by providing a user-friendly platform that offers access to a wide range of job openings across different industries and locations.</p>
+                                <a class="btn btn-primary btn-lg" href="#scroll-target">Read our story</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- About section one-->
+            <section class="py-5 bg-light" id="scroll-target">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="{% static 'img/about1.png' %}" /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">Our founding</h2>
+                            <p class="lead fw-normal text-muted mb-0">Our job portal was founded with the mission of connecting talented individuals with their dream jobs, and helping employers find the best candidates to fill their open positions. We understand the challenges that job seekers face in today's competitive job market, as well as the difficulties that companies face in finding the right talent to grow their businesses. That's why we've built a platform that makes it easy for job seekers to discover and apply for job opportunities, and for employers to find and hire top talent. From our founding, we've been committed to delivering exceptional service and support to both job seekers and employers, and we continue to innovate and improve our platform to better serve our users.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About section two-->
+            <section class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="{% static 'img/about2.png' %}" /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">Growth &amp; beyond</h2>
+                            <p class="lead fw-normal text-muted mb-0">At our job portal, we're constantly striving for growth and looking towards the future. We believe that our success is directly tied to the success of our users, and we're committed to helping job seekers and employers achieve their goals. As we continue to grow, we're expanding our offerings and services to better meet the needs of our users. Our focus on innovation and continuous improvement ensures that we're always pushing the boundaries of what's possible in the job market, and we're constantly exploring new ways to make job search and hiring easier and more effective. As we look towards the future, we remain dedicated to providing exceptional service and support to our users, and we're excited to see what new opportunities and possibilities lie ahead.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Team members section-->
+            <section class="py-5 bg-light">
+                <div class="container px-5 my-5">
+                    <div class="text-center">
+                        <h2 class="fw-bolder">Our team</h2>
+                        <p class="lead fw-normal text-muted mb-5">Dedicated to quality and your success</p>
+                    </div>
+                    <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+                        <div class="col mb-5 mb-5 mb-xl-0">
+                            <div class="text-center">
+                                <img class="img-fluid rounded-circle mb-4 px-4" style="height: 50%; width: 100%;" src="{% static 'img/shabneez.jpeg' %}" />
+                                <h5 class="fw-bolder">Shabneez</h5>
+                                <div class="fst-italic text-muted">Founder &amp; CEO</div>
+                            </div>
+                        </div>
+                        <div class="col mb-5 mb-5 mb-xl-0">
+                            <div class="text-center">
+                                <img class="img-fluid rounded-circle mb-4 px-4" style="height: 50%; width: 100%;" src="{% static 'img/ceo5.jpeg' %}" />
+                                <h5 class="fw-bolder">Vincent</h5>
+                                <div class="fst-italic text-muted">CFO</div>
+                            </div>
+                        </div>
+                        <div class="col mb-5 mb-5 mb-xl-0">
+                            <div class="text-center">
+                                <img class="img-fluid rounded-circle mb-4 px-4" style="height: 50%; width: 100%;" src="{% static 'img/ceo2.jpeg' %}" />
+                                <h5 class="fw-bolder">Damien</h5>
+                                <div class="fst-italic text-muted">Operations Manager</div>
+                            </div>
+                        </div>
+                        <div class="col mb-5 mb-5 mb-xl-0">
+                            <div class="text-center">
+                                <img class="img-fluid rounded-circle mb-4 px-4" style="height: 50%; width: 100%;" src="{% static 'img/ceo4.jpeg' %}" />
+                                <h5 class="fw-bolder">Anishka</h5>
+                                <div class="fst-italic text-muted">CTO</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+          
+            {%include 'partials/footer.html'%}
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+
+</html>

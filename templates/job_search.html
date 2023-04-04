@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xxl-6">
+                    <div class="text-center my-5">
+                        <h1 class="fw-bolder mb-3">Search Your Dream Job</h1>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div class="container" >
+    <form method="GET" action="{% url 'jobs:job_search' %}">
+      <div class="form-group">
+        <label for="title">Job Title:</label>
+        <input type="text" id="title" class="form-control" name="title" placeholder="Enter job title">
+      </div>
+      <div class="form-group">
+        <label for="location">Job Location:</label>
+        <input type="text" id="location" class="form-control" name="location" placeholder="Enter job location">
+      </div>
+      <div class="form-group">
+        <label for="job_type">Job Type:</label>
+        <select id="job_type" name="job_type" class="form-control">
+            <option value="">--Select--</option>
+          <option value="full-time">Full-time</option>
+          <option value="part-time">Part-time</option>
+          <option value="contract">Contract</option>
+          <option value="freelance">Freelance</option>
+          <option value="internship">Internship</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="job_category">Job Category:</label>
+        <select id="job_category" name="job_category" class="form-control">
+            <option value="">--Select--</option>
+          <option value="accounting">Accounting</option>
+          <option value="administrative">Administrative</option>
+          <option value="customer-service">Customer Service</option>
+          <option value="engineering">Engineering</option>
+          <option value="finance">Finance</option>
+          <option value="human-resources">Human Resources</option>
+          <option value="information-technology">Information Technology</option>
+          <option value="marketing">Marketing</option>
+          <option value="sales">Sales</option>
+          <option value="healthcare">Health Care</option>
+        </select>
+      </div>
+      <br/>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+  
+  <div class="container">
+
+  <h1>Search Results</h1>
+
+  {% if jobs %}
+    <p>{{ jobs.count }} jobs found.</p>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Location</th>
+          <th>Job Type</th>
+          <th>Job Category</th>
+          <th>Salary</th>
+          <th>Company</th>
+          <th>Date Posted</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for job in jobs %}
+          <tr>
+            <td>{{ job.id }}</td>
+            <td>{{ job.title }}</td>
+            <td>{{ job.location }}</td>
+            <td>{{ job.job_type }}</td>
+            <td>{{ job.job_category }}</td>
+            <td>{{ job.salary }}</td>
+            <td>{{ job.company }}</td>
+            <td>{{ job.date_posted|date }}</td>
+            <td><a href="{% url 'jobs:job_detail' job.id %}" class="btn btn-primary">Apply</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  {% else %}
+    <p>No jobs found.</p>
+  {% endif %}
+
+</div>
+</div>
+
+{% endblock %}
